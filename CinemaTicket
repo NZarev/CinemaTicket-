@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class CinemaTicket {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String day = scanner.next();
+
+        int price;
+        switch (day) {
+            case "Monday":
+            case "Tuesday":
+            case "Friday":
+                price = 12;
+                break;
+            case "Wednesday":
+            case "Thursday":
+                price = 14;
+                break;
+            case "Saturday":
+            case "Sunday":
+                price = 16;
+                break;
+            default:
+                price = 0; // This case shouldn't happen if input is correct
+        }
+
+        System.out.println(price);
+
+        scanner.close();
+    }
+}
